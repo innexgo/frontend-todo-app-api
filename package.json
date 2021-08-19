@@ -1,0 +1,46 @@
+{
+  "name": "@innexgo/frontend-todo-app-api",
+  "version": "0.0.1",
+  "description": "Typescript interface to backend of the todo app service.",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/innexgo/frontend-auth-api.git"
+  },
+  "author": "Govind Pimpale",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/innexgo/frontend-auth-api/issues"
+  },
+  "homepage": "https://github.com/innexgo/frontend-auth-api#readme",
+  "dependencies": {},
+  "peerDependencies": {
+    "@innexgo/frontend-common": "^0.0.9"
+  },
+  "devDependencies": {
+    "@innexgo/frontend-common": "^0.0.9",
+    "typescript": "^4.2.4"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
