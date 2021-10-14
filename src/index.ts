@@ -1,4 +1,4 @@
-import { fetchApi, Result } from '@innexgo/frontend-common'
+import { fetchApi, Result, apiUrl } from '@innexgo/frontend-common'
 
 export interface GoalIntent {
   goalIntentId: number,
@@ -191,6 +191,8 @@ export type TodoAppErrorCode = typeof TodoAppErrorCodes[number];
 
 async function fetchApiOrNetworkError<T>(url: string, props: object): Promise<Result<T, TodoAppErrorCode>> {
   try {
+    // todo app backend automatically wraps successes with  Ok and errors with Err,
+    // so no need to wrap manually
     return await fetchApi(url, props);
   } catch (_) {
     return { Err: "NETWORK" };
@@ -198,7 +200,7 @@ async function fetchApiOrNetworkError<T>(url: string, props: object): Promise<Re
 }
 
 const undefToStr= (s:string|undefined) =>
-  s === undefined ? "" : s
+  s === undefined ? apiUrl() : s
 
 export interface ExternalEventNewProps {
   name: string,
