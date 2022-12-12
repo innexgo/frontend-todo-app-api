@@ -1,6 +1,6 @@
 {
   "name": "@innexgo/frontend-todo-app-api",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Typescript interface to backend of the todo app service.",
   "main": "lib/index.js",
   "files": [
