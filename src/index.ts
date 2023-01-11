@@ -1,5 +1,14 @@
 import { fetchApi, Result, apiUrl } from '@innexgo/frontend-common'
 
+export interface Info {
+  service: string,
+  versionMajor: number,
+  versionMinor: number,
+  versionRev: number,
+  siteExternalUrl: string,
+  authServiceExternalUrl: string
+}
+
 export interface GoalIntent {
   goalIntentId: number,
   creationTime: number,
@@ -211,6 +220,11 @@ export interface ExternalEventNewProps {
   endTime: number,
   apiKey: string,
 }
+
+export function info(server?: string): Promise<Result<Info, TodoAppErrorCode>> {
+  return fetchApiOrNetworkError(undefToStr(server) + "todo_app/info", {});
+}
+
 
 export function externalEventNew(props: ExternalEventNewProps, server?: string): Promise<Result<ExternalEventData, TodoAppErrorCode>> {
   return fetchApiOrNetworkError(undefToStr(server) + "todo_app/external_event/new", props);
