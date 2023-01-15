@@ -213,7 +213,7 @@ async function fetchApiOrNetworkError<T>(url: string, props: object): Promise<Re
 }
 
 const undefToTodoAppApi = (s: string | undefined) =>
-  s === undefined ? `${staticUrl()}/public` : s
+  s === undefined ? `${staticUrl()}/public/` : s
 
 export interface ExternalEventNewProps {
   name: string,
@@ -223,12 +223,12 @@ export interface ExternalEventNewProps {
 }
 
 export function info(appPubApiHref?: string): Promise<Result<Info, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/info", {});
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "info", {});
 }
 
 
 export function externalEventNew(props: ExternalEventNewProps, appPubApiHref?: string): Promise<Result<ExternalEventData, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/external_event/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "external_event/new", props);
 }
 
 export interface ExternalEventDataNewProps {
@@ -241,7 +241,7 @@ export interface ExternalEventDataNewProps {
 }
 
 export function externalEventDataNew(props: ExternalEventDataNewProps, appPubApiHref?: string): Promise<Result<ExternalEventData, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/external_event_data/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "external_event_data/new", props);
 }
 
 export interface GoalIntentNewProps {
@@ -250,7 +250,7 @@ export interface GoalIntentNewProps {
 }
 
 export function goalIntentNew(props: GoalIntentNewProps, appPubApiHref?: string): Promise<Result<GoalIntentData, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_intent/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_intent/new", props);
 }
 
 export interface GoalIntentDataNewProps {
@@ -261,7 +261,7 @@ export interface GoalIntentDataNewProps {
 }
 
 export function goalIntentDataNew(props: GoalIntentDataNewProps, appPubApiHref?: string): Promise<Result<GoalIntentData, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_intent_data/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_intent_data/new", props);
 }
 
 export interface GoalNewProps {
@@ -274,7 +274,7 @@ export interface GoalNewProps {
 }
 
 export function goalNew(props: GoalNewProps, appPubApiHref?: string): Promise<Result<GoalData, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal/new", props);
 }
 
 export interface GoalDataNewProps {
@@ -287,7 +287,7 @@ export interface GoalDataNewProps {
 }
 
 export function goalDataNew(props: GoalDataNewProps, appPubApiHref?: string): Promise<Result<GoalData, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_data/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_data/new", props);
 }
 
 export interface GoalEventNewProps {
@@ -299,7 +299,7 @@ export interface GoalEventNewProps {
 }
 
 export function goalEventNew(props: GoalEventNewProps, appPubApiHref?: string): Promise<Result<GoalEvent, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_event/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_event/new", props);
 }
 
 
@@ -311,7 +311,7 @@ export interface GoalDependencyNewProps {
 }
 
 export function goalDependencyNew(props: GoalDependencyNewProps, appPubApiHref?: string): Promise<Result<GoalDependency, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_dependency/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_dependency/new", props);
 }
 
 
@@ -323,7 +323,7 @@ export interface GoalEntityTagNewProps {
 }
 
 export function goalEntityTagNew(props: GoalEntityTagNewProps, appPubApiHref?: string): Promise<Result<GoalEntityTag, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_entity_tag/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_entity_tag/new", props);
 }
 
 export interface TimeUtilityFunctionNewProps {
@@ -333,7 +333,7 @@ export interface TimeUtilityFunctionNewProps {
 }
 
 export function timeUtilityFunctionNew(props: TimeUtilityFunctionNewProps, appPubApiHref?: string): Promise<Result<TimeUtilityFunction, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/time_utility_function/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "time_utility_function/new", props);
 }
 
 export interface UserGeneratedCodeNewProps {
@@ -344,7 +344,7 @@ export interface UserGeneratedCodeNewProps {
 }
 
 export function userGeneratedCodeNew(props: UserGeneratedCodeNewProps, appPubApiHref?: string): Promise<Result<UserGeneratedCode, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/user_generated_code/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "user_generated_code/new", props);
 }
 
 export interface GoalTemplateNewProps {
@@ -356,7 +356,7 @@ export interface GoalTemplateNewProps {
 }
 
 export function goalTemplateNew(props: GoalTemplateNewProps, appPubApiHref?: string): Promise<Result<GoalTemplateData, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_template/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_template/new", props);
 }
 
 
@@ -371,7 +371,7 @@ export interface GoalTemplateDataNewProps {
 }
 
 export function goalTemplateDataNew(props: GoalTemplateDataNewProps, appPubApiHref?: string): Promise<Result<GoalTemplateData, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_template_data/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_template_data/new", props);
 }
 
 export interface GoalTemplatePatternNewProps {
@@ -382,7 +382,7 @@ export interface GoalTemplatePatternNewProps {
 }
 
 export function goalTemplatePatternNew(props: GoalTemplatePatternNewProps, appPubApiHref?: string): Promise<Result<GoalTemplatePattern, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_template_pattern/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_template_pattern/new", props);
 }
 
 
@@ -393,7 +393,7 @@ export interface NamedEntityNewProps {
 }
 
 export function namedEntityNew(props: NamedEntityNewProps, appPubApiHref?: string): Promise<Result<NamedEntity, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/named_entity/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "named_entity/new", props);
 }
 
 
@@ -406,7 +406,7 @@ export interface NamedEntityDataNewProps {
 }
 
 export function namedEntityDataNew(props: NamedEntityDataNewProps, appPubApiHref?: string): Promise<Result<NamedEntityData, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/named_entity_data/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "named_entity_data/new", props);
 }
 
 export interface NamedEntityPatternNewProps {
@@ -417,7 +417,7 @@ export interface NamedEntityPatternNewProps {
 }
 
 export function namedEntityPatternNew(props: NamedEntityPatternNewProps, appPubApiHref?: string): Promise<Result<NamedEntityPattern, TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/named_entity_pattern/new", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "named_entity_pattern/new", props);
 }
 
 export interface GoalIntentViewProps {
@@ -429,7 +429,7 @@ export interface GoalIntentViewProps {
 }
 
 export function goalIntentView(props: GoalIntentViewProps, appPubApiHref?: string): Promise<Result<GoalIntent[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_intent/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_intent/view", props);
 }
 
 export interface GoalIntentDataViewProps {
@@ -446,7 +446,7 @@ export interface GoalIntentDataViewProps {
 }
 
 export function goalIntentDataView(props: GoalIntentDataViewProps, appPubApiHref?: string): Promise<Result<GoalIntentData[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_intent_data/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_intent_data/view", props);
 }
 
 export interface GoalViewProps {
@@ -459,7 +459,7 @@ export interface GoalViewProps {
 }
 
 export function goalView(props: GoalViewProps, appPubApiHref?: string): Promise<Result<Goal[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal/view", props);
 }
 
 export interface GoalDataViewProps {
@@ -482,7 +482,7 @@ export interface GoalDataViewProps {
 
 
 export function goalDataView(props: GoalDataViewProps, appPubApiHref?: string): Promise<Result<GoalData[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_data/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_data/view", props);
 }
 
 export interface GoalEventViewProps {
@@ -501,7 +501,7 @@ export interface GoalEventViewProps {
 }
 
 export function goalEventView(props: GoalEventViewProps, appPubApiHref?: string): Promise<Result<GoalEvent[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_event/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_event/view", props);
 }
 
 export interface GoalDependencyViewProps {
@@ -517,7 +517,7 @@ export interface GoalDependencyViewProps {
 }
 
 export function goalDependencyView(props: GoalDependencyViewProps, appPubApiHref?: string): Promise<Result<GoalDependency[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_dependency/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_dependency/view", props);
 }
 
 export interface GoalTemplateViewProps {
@@ -529,7 +529,7 @@ export interface GoalTemplateViewProps {
 }
 
 export function goalTemplateView(props: GoalTemplateViewProps, appPubApiHref?: string): Promise<Result<GoalTemplate[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_template/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_template/view", props);
 }
 
 export interface GoalTemplateDataViewProps {
@@ -551,7 +551,7 @@ export interface GoalTemplateDataViewProps {
 }
 
 export function goalTemplateDataView(props: GoalTemplateDataViewProps, appPubApiHref?: string): Promise<Result<GoalTemplateData[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_template_data/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_template_data/view", props);
 }
 
 export interface GoalTemplatePatternViewProps {
@@ -567,7 +567,7 @@ export interface GoalTemplatePatternViewProps {
 }
 
 export function goalTemplatePatternView(props: GoalTemplatePatternViewProps, appPubApiHref?: string): Promise<Result<GoalTemplatePattern[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/goal_template_pattern/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "goal_template_pattern/view", props);
 }
 
 export interface ExternalEventViewProps {
@@ -579,7 +579,7 @@ export interface ExternalEventViewProps {
 }
 
 export function externalEventView(props: ExternalEventViewProps, appPubApiHref?: string): Promise<Result<ExternalEvent[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/external_event/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "external_event/view", props);
 }
 
 export interface ExternalEventDataViewProps {
@@ -599,7 +599,7 @@ export interface ExternalEventDataViewProps {
 }
 
 export function externalEventDataView(props: ExternalEventDataViewProps, appPubApiHref?: string): Promise<Result<ExternalEventData[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/external_event_data/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "external_event_data/view", props);
 }
 
 export interface TimeUtilityFunctionViewProps {
@@ -611,7 +611,7 @@ export interface TimeUtilityFunctionViewProps {
 }
 
 export function timeUtilityFunctionView(props: TimeUtilityFunctionViewProps, appPubApiHref?: string): Promise<Result<TimeUtilityFunction[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/time_utility_function/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "time_utility_function/view", props);
 }
 
 export interface UserGeneratedCodeViewProps {
@@ -624,7 +624,7 @@ export interface UserGeneratedCodeViewProps {
 }
 
 export function userGeneratedCodeView(props: UserGeneratedCodeViewProps, appPubApiHref?: string): Promise<Result<UserGeneratedCode[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/user_generated_code/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "user_generated_code/view", props);
 }
 
 export interface NamedEntityViewProps {
@@ -636,7 +636,7 @@ export interface NamedEntityViewProps {
 }
 
 export function namedEntityView(props: NamedEntityViewProps, appPubApiHref?: string): Promise<Result<NamedEntity[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/named_entity/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "named_entity/view", props);
 }
 
 export interface NamedEntityDataViewProps {
@@ -653,7 +653,7 @@ export interface NamedEntityDataViewProps {
 }
 
 export function namedEntityDataView(props: NamedEntityDataViewProps, appPubApiHref?: string): Promise<Result<NamedEntityData[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/named_entity_data/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "named_entity_data/view", props);
 }
 
 export interface NamedEntityPatternViewProps {
@@ -669,7 +669,7 @@ export interface NamedEntityPatternViewProps {
 }
 
 export function namedEntityPatternView(props: NamedEntityPatternViewProps, appPubApiHref?: string): Promise<Result<NamedEntityPattern[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/named_entity_pattern/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "named_entity_pattern/view", props);
 }
 
 export interface GoalEntityTagViewProps {
@@ -685,6 +685,6 @@ export interface GoalEntityTagViewProps {
 }
 
 export function goalEntityTagView(props: GoalEntityTagViewProps, appPubApiHref?: string): Promise<Result<GoalEntityTag[], TodoAppErrorCode>> {
-  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "/named_entity_pattern/view", props);
+  return fetchApiOrNetworkError(undefToTodoAppApi(appPubApiHref) + "named_entity_pattern/view", props);
 }
 
